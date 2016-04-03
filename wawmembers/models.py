@@ -419,16 +419,16 @@ class World(models.Model):
                 self.world_descriptor = "The Democratic World of"
             elif 20 < self.polsystem < 60:
                 self.leadertitle = 'President'
-                self.world_descriptor = "The Technically Democratic World of"
+                self.world_descriptor = "The Federated World of"
             elif -20 <= self.polsystem <= 20:
                 self.leadertitle = 'General Secretary'
                 self.world_descriptor = "The People's World of"
             elif -60 < self.polsystem < -20:
-                self.leadertitle = 'Lord Admiral'
-                self.world_descriptor = "The Grand World of"
+                self.leadertitle = 'High Admiral'
+                self.world_descriptor = "The Glorious World of"
             elif self.polsystem <= -60:
                 self.leadertitle = 'Beloved Leader'
-                self.world_descriptor = "The Supremely Grand Democratic People's World of"
+                self.world_descriptor = "The Glorious Democratic Republican People's World of"
         super(World, self).save(*args, **kwargs)
 
     def delete(self, *args, **kwargs):
